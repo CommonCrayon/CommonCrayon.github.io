@@ -4,59 +4,58 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CrayonAllPortals | CommonCrayon</title>
-  <meta name="description" content="Route planner for Minecraft All Portals speedruns. Works solo or in co-op, and only one player needs to run it.">
-  <meta name="theme-color" content="#ff7f26">
+  <meta name="description" content="Plans an All Portals route from one stronghold per ring and splits it evenly between players.">
+  <meta name="theme-color" content="#0c1428">
   <meta property="og:title" content="CrayonAllPortals">
-  <meta property="og:description" content="Route planner for Minecraft All Portals speedruns. Works solo or in co-op, and only one player needs to run it.">
+  <meta property="og:description" content="Plans an All Portals route from one stronghold per ring and splits it evenly between players.">
   <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
   <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/site.css">
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
-  <header class="on-orange">
-    <div class="wrap">
-      <nav class="nav" aria-label="Main">
-        <a class="brand" href="../../"><img src="../../assets/img/logo.jpg" alt="" width="40" height="40"><span>CommonCrayon</span></a>
-        <ul class="nav-links">
-          <li><a href="../../#software" aria-current="page">Software</a></li>
-        </ul>
+  <div class="lay">
+    <aside class="side">
+      <a class="brand" href="../../"><img src="../../assets/img/logo.jpg" alt="" width="30" height="30">CommonCrayon</a>
+      <nav aria-label="Main">
+        <a href="../../">All<small>3</small></a>
+        <a href="../../#games">Games<small>1</small></a>
+        <a href="../../#software" aria-current="page">Software<small>2</small></a>
+        <a href="../../privacy/">Privacy</a>
       </nav>
-      <div class="page-head">
-        <a class="back" href="../../#software"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>All software</a>
-        <h1>CrayonAllPortals</h1>
-        <p>Route planner for Minecraft All Portals speedruns. Works solo or in co-op, and only one player needs to run it.</p>
-        <ul class="tags"><li class="tag">Windows</li><li class="tag">Minecraft speedrun</li><li class="tag">Solo &amp; co-op</li></ul>
+      <div class="meta">CATALOGUE<br>REV 2026.10<br>© 2026 CommonCrayon<br>Ads keep this site free.</div>
+    </aside>
+    <main id="content">
+      <p class="crumb"><a href="../../">All</a> / <a href="../../#software">Software</a> / CrayonAllPortals</p>
+      <div class="head">
+        <div><div class="pn">CC-001</div><h1>CrayonAllPortals</h1><p>Plans an All Portals route from one stronghold per ring and splits it evenly between players.</p></div>
       </div>
-    </div>
-  </header>
+      <div class="page">
+        <div class="prose">
+          <figure class="figure">
+            <img src="../../assets/img/allportals-app.jpg" alt="CrayonAllPortals with eight stronghold rings entered and four colour-coded player paths on the map" width="1000" height="1010">
+            <figcaption>FIG. 1  Eight rings entered, four paths generated. Each path's colour matches its player.</figcaption>
+          </figure>
 
-  <div id="content" class="wrap layout">
-    <main class="prose">
-      <figure class="figure">
-        <img src="../../assets/img/allportals-app.jpg" alt="CrayonAllPortals with eight stronghold rings entered and four colour-coded player paths on the map" width="1000" height="1010">
-        <figcaption>Eight rings entered, four paths generated. Each path's colour matches its player.</figcaption>
-      </figure>
+          <h2>What it does</h2>
+          <p>An All Portals run means lighting every End portal in the game. Enter one stronghold per ring and CrayonAllPortals predicts the rest of the ring, shows the ideal blind distance for each ring in the overworld and the nether, and works out the best route through all of them.</p>
+          <p>In co-op, players pair up on paths. The solver balances the paths so they all finish around the same time, and you can give faster players more work by raising their weight.</p>
 
-      <h2>What it does</h2>
-      <p>An All Portals run means lighting every End portal in the game. Enter one stronghold per ring and CrayonAllPortals predicts the rest of the ring, shows the ideal blind distance for each ring in the overworld and the nether, and works out the best route through all of them.</p>
-      <p>In co-op, players pair up on paths. The solver balances the paths so they all finish around the same time, and you can give faster players more work by raising their weight.</p>
+          <h2>How to use it</h2>
+          <ol class="steps">
+            <li><span>Download <code>CrayonAllPortals.exe</code> and run it. There's nothing to install.</span></li>
+            <li><span>Enter the X and Z of one stronghold in each ring, or paste an F3+C command, then press Set. <a href="../crayon-nav-assist/">CrayonNavAssist</a> helps you measure these.</span></li>
+            <li><span>Set the number of players and how long the solver should search. More time gives better routes.</span></li>
+            <li><span>Click Generate Paths. The map draws the best routes found so far while it works.</span></li>
+            <li><span>Edit any path's stronghold list to change it. The map updates as you type.</span></li>
+            <li><span>Click Copy for NavAssist and paste each player's path into their CrayonNavAssist.</span></li>
+          </ol>
 
-      <h2>How to use it</h2>
-      <ol class="steps">
-        <li><span>Download <code>CrayonAllPortals.exe</code> and run it. There's nothing to install.</span></li>
-        <li><span>Enter the X and Z of one stronghold in each ring, or paste an F3+C command, then press Set. <a href="../crayon-nav-assist/">CrayonNavAssist</a> helps you measure these.</span></li>
-        <li><span>Set the number of players and how long the solver should search. More time gives better routes.</span></li>
-        <li><span>Click Generate Paths. The map draws the best routes found so far while it works.</span></li>
-        <li><span>Edit any path's stronghold list to change it. The map updates as you type.</span></li>
-        <li><span>Click Copy for NavAssist and paste each player's path into their CrayonNavAssist.</span></li>
-      </ol>
-
-      <h2>What gets copied</h2>
-      <p>The copied text lists each path as <code>[id, x, z]</code> lines, ready for CrayonNavAssist:</p>
+          <h2>What gets copied</h2>
+          <p>The copied text lists each path as <code>[id, x, z]</code> lines, ready for CrayonNavAssist:</p>
 <pre><code>All Portals Paths
 
 Path 1 - Player 1 &amp; Player 2
@@ -68,38 +67,27 @@ Path 2 - Player 3 &amp; Player 4
 [2,-1246,1625]
 [6,-3888,3331]
 [13,-4719,6696]</code></pre>
-      <p>Everything you enter is saved automatically and comes back the next time you open the app.</p>
+          <p>Everything you enter is saved automatically and comes back the next time you open the app.</p>
+        </div>
+        <aside class="aside">
+          <div class="panel" data-repo="CommonCrayon/CrayonAllPortals" data-asset=".exe">
+            <h2>DOWNLOAD</h2>
+            <a class="btn" data-download aria-disabled="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg><span data-label>Download</span></a>
+            <table class="spec">
+              <tr><td>Version</td><td data-field="version">Latest</td></tr>
+              <tr><td>File</td><td>.exe</td></tr>
+              <tr data-hide-empty hidden><td>Size</td><td data-field="size"></td></tr>
+              <tr data-hide-empty hidden><td>Released</td><td data-field="date"></td></tr>
+              <tr data-hide-empty hidden><td>Downloads</td><td data-field="downloads"></td></tr>
+              <tr><td>Needs</td><td>Windows 10/11</td></tr>
+            </table>
+          </div>
+          <div class="panel"><h2>WORKS WITH</h2><p class="note"><a href="../crayon-nav-assist/">CrayonNavAssist</a> (CC-002) follows the route in game and tells each player where to go next.</p></div>
+          <div class="ad-slot"></div>
+        </aside>
+      </div>
     </main>
-    <aside class="aside">
-      <div class="panel" data-repo="CommonCrayon/CrayonAllPortals" data-asset=".exe">
-        <h2>Download</h2>
-        <a class="btn btn-orange is-wide" data-download aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg><span data-label>Download latest</span></a>
-        <dl class="facts">
-          <dt>Version</dt><dd data-field="version">Latest</dd>
-          <dt>File</dt><dd>Windows .exe</dd>
-          <div data-hide-empty hidden><dt>Size</dt><dd data-field="size"></dd></div>
-          <div data-hide-empty hidden><dt>Released</dt><dd data-field="date"></dd></div>
-          <div data-hide-empty hidden><dt>Downloads</dt><dd data-field="downloads"></dd></div>
-          <dt>Needs</dt><dd>Windows 10 or 11</dd>
-        </dl>
-      </div>
-      <div class="panel">
-        <h2>Works with</h2>
-        <p class="small"><a href="../crayon-nav-assist/">CrayonNavAssist</a> follows the route in game and tells each player where to go next.</p>
-      </div>
-      <div class="ad-slot"></div>
-    </aside>
   </div>
-
-  <footer class="footer">
-    <div class="wrap">
-      <p>© 2026 CommonCrayon. This site shows ads to stay free.</p>
-      <ul>
-        <li><a href="https://www.mappack.net/">MapPack</a></li>
-        <li><a href="../../privacy/">Privacy</a></li>
-      </ul>
-    </div>
-  </footer>
   <script src="../../assets/js/releases.js" defer></script>
   <script src="../../assets/js/ads.js" defer></script>
 </body>

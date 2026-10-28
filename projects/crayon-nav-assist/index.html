@@ -4,106 +4,94 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CrayonNavAssist | CommonCrayon</title>
-  <meta name="description" content="Stronghold navigation for Minecraft All Portals speedruns. Paste your route, press F3+C in game, and it shows which way to turn and how far to go.">
-  <meta name="theme-color" content="#ff7f26">
+  <meta name="description" content="Overlay that shows the distance and turn angle to your next stronghold each time you press F3+C.">
+  <meta name="theme-color" content="#0c1428">
   <meta property="og:title" content="CrayonNavAssist">
-  <meta property="og:description" content="Stronghold navigation for Minecraft All Portals speedruns. Paste your route, press F3+C in game, and it shows which way to turn and how far to go.">
+  <meta property="og:description" content="Overlay that shows the distance and turn angle to your next stronghold each time you press F3+C.">
   <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
   <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/site.css">
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
-  <header class="on-orange">
-    <div class="wrap">
-      <nav class="nav" aria-label="Main">
-        <a class="brand" href="../../"><img src="../../assets/img/logo.jpg" alt="" width="40" height="40"><span>CommonCrayon</span></a>
-        <ul class="nav-links">
-          <li><a href="../../#software" aria-current="page">Software</a></li>
-        </ul>
+  <div class="lay">
+    <aside class="side">
+      <a class="brand" href="../../"><img src="../../assets/img/logo.jpg" alt="" width="30" height="30">CommonCrayon</a>
+      <nav aria-label="Main">
+        <a href="../../">All<small>3</small></a>
+        <a href="../../#games">Games<small>1</small></a>
+        <a href="../../#software" aria-current="page">Software<small>2</small></a>
+        <a href="../../privacy/">Privacy</a>
       </nav>
-      <div class="page-head">
-        <a class="back" href="../../#software"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>All software</a>
-        <h1>CrayonNavAssist</h1>
-        <p>Stronghold navigation for Minecraft All Portals speedruns. Paste your route, press F3+C in game, and it shows which way to turn and how far to go.</p>
-        <ul class="tags"><li class="tag">Java 17+</li><li class="tag">Minecraft speedrun</li><li class="tag">Overlay</li></ul>
-      </div>
-    </div>
-  </header>
-
-  <div id="content" class="wrap layout">
-    <main class="prose">
-      <div class="figure-pair">
-        <figure class="figure">
-          <img src="../../assets/img/config-page.png" alt="CrayonNavAssist config page with a pasted route, launch button and settings" width="421" height="600">
-          <figcaption>Config page</figcaption>
-        </figure>
-        <figure class="figure">
-          <img src="../../assets/img/nav-assist.png" alt="Nav window showing stronghold 4 of 8, target coordinates, distance and turning angle" width="522" height="180">
-          <figcaption>Nav window. Green means you're facing the right way.</figcaption>
-        </figure>
-      </div>
-
-      <h2>How to use it</h2>
-      <ol class="steps">
-        <li><span>Download the latest <code>.jar</code> and open it. You need Java 17 or newer.</span></li>
-        <li><span>Find a stronghold in each ring using the eight default coordinates.</span></li>
-        <li><span>Put your results into <a href="../crayon-all-portals/">CrayonAllPortals</a> to get your route.</span></li>
-        <li><span>Paste the route in and click Launch.</span></li>
-        <li><span>Press F3+C in game whenever you want the distance and angle updated.</span></li>
-      </ol>
-
-      <h2>The nav window</h2>
-      <ul>
-        <li><strong>ID</strong> is the stronghold number.</li>
-        <li><strong>Target</strong> is where to go. It switches to nether coordinates while you're in the nether.</li>
-        <li><strong>Distance</strong> is how many blocks are left.</li>
-        <li><strong>Angle</strong> is the F3 facing to aim for, then how far to turn.</li>
-        <li>Use the arrow buttons or Ctrl + Left / Right to move between strongholds. Right-click the window to jump back to the first.</li>
-      </ul>
-
-      <h2>Settings</h2>
-      <ul>
-        <li><strong>Paste list</strong> takes one <code>[id, x, z]</code> per line and ignores other lines. Add <code>"a note"</code> after a line to show it under the target.</li>
-        <li><strong>Target as Chunks</strong> shows chunk coordinates instead of block coordinates.</li>
-        <li><strong>Compact Overlay</strong> hides the title bar and lets you set the opacity. Drag to move it, right-click to close it.</li>
-        <li><strong>Rebind Controls</strong> lets you set any key combo. Press Esc to cancel.</li>
-      </ul>
-      <p>Settings save automatically to <code>%APPDATA%\CrayonNavAssist</code>. Relaunching picks up at the same stronghold.</p>
-    </main>
-    <aside class="aside">
-      <div class="panel" data-repo="CommonCrayon/CrayonAllPortalsJava" data-asset=".jar">
-        <h2>Download</h2>
-        <a class="btn btn-orange is-wide" data-download aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg><span data-label>Download latest</span></a>
-        <dl class="facts">
-          <dt>Version</dt><dd data-field="version">Latest</dd>
-          <dt>File</dt><dd>Java .jar</dd>
-          <div data-hide-empty hidden><dt>Size</dt><dd data-field="size"></dd></div>
-          <div data-hide-empty hidden><dt>Released</dt><dd data-field="date"></dd></div>
-          <div data-hide-empty hidden><dt>Downloads</dt><dd data-field="downloads"></dd></div>
-          <dt>Needs</dt><dd>Java 17 or newer</dd>
-        </dl>
-      </div>
-      <div class="panel">
-        <h2>Works with</h2>
-        <p class="small"><a href="../crayon-all-portals/">CrayonAllPortals</a> plans the route you paste in here.</p>
-      </div>
-      <div class="ad-slot"></div>
+      <div class="meta">CATALOGUE<br>REV 2026.10<br>© 2026 CommonCrayon<br>Ads keep this site free.</div>
     </aside>
-  </div>
+    <main id="content">
+      <p class="crumb"><a href="../../">All</a> / <a href="../../#software">Software</a> / CrayonNavAssist</p>
+      <div class="head">
+        <div><div class="pn">CC-002</div><h1>CrayonNavAssist</h1><p>Overlay that shows the distance and turn angle to your next stronghold each time you press F3+C.</p></div>
+      </div>
+      <div class="page">
+        <div class="prose">
+          <div class="figs">
+            <figure class="figure pad">
+              <img src="../../assets/img/config-page.png" alt="CrayonNavAssist config page with a pasted route, launch button and settings" width="421" height="600">
+              <figcaption>FIG. 1  Config page</figcaption>
+            </figure>
+            <figure class="figure pad">
+              <img src="../../assets/img/nav-assist.png" alt="Nav window showing stronghold 4 of 8, target coordinates, distance and turning angle" width="522" height="180">
+              <figcaption>FIG. 2  Nav window. Green means you're facing the right way.</figcaption>
+            </figure>
+          </div>
 
-  <footer class="footer">
-    <div class="wrap">
-      <p>© 2026 CommonCrayon. This site shows ads to stay free.</p>
-      <ul>
-        <li><a href="https://www.mappack.net/">MapPack</a></li>
-        <li><a href="../../privacy/">Privacy</a></li>
-      </ul>
-    </div>
-  </footer>
+          <h2>How to use it</h2>
+          <ol class="steps">
+            <li><span>Download the latest <code>.jar</code> and open it. You need Java 17 or newer.</span></li>
+            <li><span>Find a stronghold in each ring using the eight default coordinates.</span></li>
+            <li><span>Put your results into <a href="../crayon-all-portals/">CrayonAllPortals</a> to get your route.</span></li>
+            <li><span>Paste the route in and click Launch.</span></li>
+            <li><span>Press F3+C in game whenever you want the distance and angle updated.</span></li>
+          </ol>
+
+          <h2>The nav window</h2>
+          <ul>
+            <li><strong>ID</strong> is the stronghold number.</li>
+            <li><strong>Target</strong> is where to go. It switches to nether coordinates while you're in the nether.</li>
+            <li><strong>Distance</strong> is how many blocks are left.</li>
+            <li><strong>Angle</strong> is the F3 facing to aim for, then how far to turn.</li>
+            <li>Use the arrow buttons or Ctrl + Left / Right to move between strongholds. Right-click the window to jump back to the first.</li>
+          </ul>
+
+          <h2>Settings</h2>
+          <ul>
+            <li><strong>Paste list</strong> takes one <code>[id, x, z]</code> per line and ignores other lines. Add <code>"a note"</code> after a line to show it under the target.</li>
+            <li><strong>Target as Chunks</strong> shows chunk coordinates instead of block coordinates.</li>
+            <li><strong>Compact Overlay</strong> hides the title bar and lets you set the opacity. Drag to move it, right-click to close it.</li>
+            <li><strong>Rebind Controls</strong> lets you set any key combo. Press Esc to cancel.</li>
+          </ul>
+          <p>Settings save automatically to <code>%APPDATA%\CrayonNavAssist</code>. Relaunching picks up at the same stronghold.</p>
+        </div>
+        <aside class="aside">
+          <div class="panel" data-repo="CommonCrayon/CrayonAllPortalsJava" data-asset=".jar">
+            <h2>DOWNLOAD</h2>
+            <a class="btn" data-download aria-disabled="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg><span data-label>Download</span></a>
+            <table class="spec">
+              <tr><td>Version</td><td data-field="version">Latest</td></tr>
+              <tr><td>File</td><td>.jar</td></tr>
+              <tr data-hide-empty hidden><td>Size</td><td data-field="size"></td></tr>
+              <tr data-hide-empty hidden><td>Released</td><td data-field="date"></td></tr>
+              <tr data-hide-empty hidden><td>Downloads</td><td data-field="downloads"></td></tr>
+              <tr><td>Needs</td><td>Java 17+</td></tr>
+            </table>
+          </div>
+          <div class="panel"><h2>WORKS WITH</h2><p class="note"><a href="../crayon-all-portals/">CrayonAllPortals</a> (CC-001) plans the route you paste in here.</p></div>
+          <div class="ad-slot"></div>
+        </aside>
+      </div>
+    </main>
+  </div>
   <script src="../../assets/js/releases.js" defer></script>
   <script src="../../assets/js/ads.js" defer></script>
 </body>

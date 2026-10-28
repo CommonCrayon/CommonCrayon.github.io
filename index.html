@@ -4,137 +4,64 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CommonCrayon</title>
-  <meta name="description" content="Free software by CommonCrayon: Minecraft All Portals speedrun tools and games from MapPack.">
-  <meta name="theme-color" content="#ff7f26">
+  <meta name="description" content="Free games and software by CommonCrayon: games from MapPack and tools for Minecraft All Portals speedruns.">
+  <meta name="theme-color" content="#0c1428">
   <meta property="og:title" content="CommonCrayon">
-  <meta property="og:description" content="Free tools and games, ready to download.">
-  <meta property="og:image" content="https://commoncrayon.github.io/assets/img/apple-touch-icon.png">
+  <meta property="og:description" content="Free games and software by CommonCrayon: games from MapPack and tools for Minecraft All Portals speedruns.">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-  <a class="skip" href="#software">Skip to software</a>
-
-  <header class="on-orange">
-    <div class="wrap">
-      <nav class="nav" aria-label="Main">
-        <a class="brand" href="./"><img src="assets/img/logo.jpg" alt="" width="40" height="40"><span>CommonCrayon</span></a>
-        <ul class="nav-links">
-          <li><a href="#software">Software</a></li>
-        </ul>
+  <a class="skip" href="#content">Skip to content</a>
+  <div class="lay">
+    <aside class="side">
+      <a class="brand" href=""><img src="assets/img/logo.jpg" alt="" width="30" height="30">CommonCrayon</a>
+      <nav aria-label="Main">
+        <a href="./" aria-current="page">All<small>3</small></a>
+        <a href="#games">Games<small>1</small></a>
+        <a href="#software">Software<small>2</small></a>
+        <a href="privacy/">Privacy</a>
       </nav>
+      <div class="meta">CATALOGUE<br>REV 2026.10<br>© 2026 CommonCrayon<br>Ads keep this site free.</div>
+    </aside>
+    <main id="content">
+      <h1>Free games and software.</h1>
+      <p class="sub">Games from MapPack and tools for Minecraft All Portals speedruns. Everything here is free.</p>
 
-      <div class="hero">
-        <div>
-          <h1>Free tools and games, ready to download.</h1>
-          <p>Minecraft All Portals speedrun tools, desktop apps, and games from MapPack.</p>
-          <a class="btn" href="#software">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg>
-            Browse software
-          </a>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <svg class="draw" viewBox="0 0 120 120">
-            <g transform="rotate(-45 60 60)">
-              <path pathLength="1" style="--len:1" d="M20 46 H78 V74 H20 Q12 74 12 66 V54 Q12 46 20 46 Z"/>
-              <line pathLength="1" style="--len:1;--d:.35s" x1="28" y1="46" x2="28" y2="74"/>
-              <line pathLength="1" style="--len:1;--d:.45s" x1="66" y1="46" x2="66" y2="74"/>
-              <path pathLength="1" style="--len:1;--d:.55s" d="M78 46 L98 55 V65 L78 74"/>
-              <path pathLength="1" style="--len:1;--d:.75s" d="M98 55 L108 60 L98 65"/>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main id="software" class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Software</h2>
-        <p>Everything here is free.</p>
-      </div>
-
-      <ul class="shelf">
-        <li class="item" data-repo="CommonCrayon/CrayonAllPortals" data-asset=".exe">
-          <div class="item-shot is-cover">
-            <img src="assets/img/allportals-app.jpg" alt="CrayonAllPortals showing eight stronghold rings and four colour-coded player paths" loading="lazy" width="1000" height="1010">
-          </div>
-          <div class="item-body">
-            <h3><a href="projects/crayon-all-portals/">CrayonAllPortals</a></h3>
-            <ul class="tags"><li class="tag">Windows</li><li class="tag">Minecraft speedrun</li><li class="tag">Solo &amp; co-op</li></ul>
-            <p>Plans an All Portals run. Enter one stronghold per ring and it predicts the rest, then splits the route between your players so every path finishes together.</p>
-            <div class="item-actions">
-              <a class="btn btn-orange" data-download aria-disabled="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg>
-                <span data-label>Download</span>
-              </a>
-              <a class="btn btn-line" href="projects/crayon-all-portals/">Details</a>
-              <span class="release-note" data-hide-empty hidden><span data-field="size"></span> .exe</span>
-            </div>
-          </div>
-        </li>
-
-        <li class="item" data-repo="CommonCrayon/CrayonAllPortalsJava" data-asset=".jar">
-          <div class="item-shot">
-            <img src="assets/img/nav-assist.png" alt="CrayonNavAssist window showing stronghold 4 of 8, its target, distance and angle" loading="lazy" width="522" height="180">
-          </div>
-          <div class="item-body">
-            <h3><a href="projects/crayon-nav-assist/">CrayonNavAssist</a></h3>
-            <ul class="tags"><li class="tag">Java 17+</li><li class="tag">Minecraft speedrun</li><li class="tag">Overlay</li></ul>
-            <p>Walks you through your route in game. Paste your path, press F3+C, and it tells you which way to turn and how far to go to the next stronghold.</p>
-            <div class="item-actions">
-              <a class="btn btn-orange" data-download aria-disabled="true">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg>
-                <span data-label>Download</span>
-              </a>
-              <a class="btn btn-line" href="projects/crayon-nav-assist/">Details</a>
-              <span class="release-note" data-hide-empty hidden><span data-field="size"></span> .jar</span>
-            </div>
-          </div>
-        </li>
-
-        <li class="item">
-          <div class="item-shot is-cover">
-            <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2862670/header.jpg" alt="Playback Loop key art" style="object-position:center" onerror="this.parentElement.classList.add('is-fallback');this.remove()" loading="lazy" width="460" height="215">
-          </div>
-          <div class="item-body">
-            <h3><a href="projects/playback-loop/">Playback Loop</a></h3>
-            <ul class="tags"><li class="tag">Steam</li><li class="tag">Free to play</li><li class="tag">Puzzle platformer</li></ul>
-            <p>A first-person puzzle game from MapPack. Record your moves, then play them back as ghosts that help you past each obstacle.</p>
-            <div class="item-actions">
-              <a class="btn btn-orange" href="https://store.steampowered.com/app/2862670/Playback_Loop/">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>
-                Play free on Steam
-              </a>
-              <a class="btn btn-line" href="projects/playback-loop/">Details</a>
-            </div>
-          </div>
+      <div class="sec" id="games"><h2>Games</h2><span>1 ITEM</span></div>
+      <ul class="list">
+        <li class="row">
+          <div class="fig"><img class="cover" src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2862670/header.jpg" alt="Playback Loop key art" loading="lazy" style="object-position:center" onerror="this.parentElement.classList.add('is-fallback');this.remove()"></div>
+          <div><div class="pn">MP-001</div><h3><a href="projects/playback-loop/">Playback Loop</a></h3><p>First-person puzzle game by MapPack. Record your moves and replay them as ghosts.</p></div>
+          <table class="spec"><tr><td>Price</td><td>Free</td></tr><tr><td>Platform</td><td>Steam</td></tr><tr><td>Released</td><td>2024-07-22</td></tr><tr><td>Studio</td><td>MapPack</td></tr></table>
+          <div class="acts"><a class="btn" href="https://store.steampowered.com/app/2862670/Playback_Loop/">Play free on Steam</a><a class="btn line" href="projects/playback-loop/">Details</a></div>
         </li>
       </ul>
 
-      <div class="later">
-        <p>More software is on the way.</p>
-      </div>
+      <div class="sec" id="software"><h2>Software</h2><span>2 ITEMS</span></div>
+      <ul class="list">
+        <li class="row" data-repo="CommonCrayon/CrayonAllPortals" data-asset=".exe">
+          <div class="fig"><img class="cover" src="assets/img/allportals-app.jpg" alt="CrayonAllPortals with eight stronghold rings and four colour-coded player paths" loading="lazy"></div>
+          <div><div class="pn">CC-001</div><h3><a href="projects/crayon-all-portals/">CrayonAllPortals</a></h3><p>Plans an All Portals route from one stronghold per ring and splits it evenly between players.</p></div>
+          <table class="spec"><tr><td>Version</td><td data-field="version">Latest</td></tr><tr><td>Platform</td><td>Windows 10/11</td></tr><tr><td>File</td><td>.exe<span data-hide-empty hidden>, <span data-field="size"></span></span></td></tr></table>
+          <div class="acts"><a class="btn" data-download aria-disabled="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg><span data-label>Download</span></a><a class="btn line" href="projects/crayon-all-portals/">Details</a></div>
+        </li>
+        <li class="row" data-repo="CommonCrayon/CrayonAllPortalsJava" data-asset=".jar">
+          <div class="fig"><img class="fit" src="assets/img/nav-assist.png" alt="CrayonNavAssist window showing stronghold 4 of 8 with distance and angle" loading="lazy"></div>
+          <div><div class="pn">CC-002</div><h3><a href="projects/crayon-nav-assist/">CrayonNavAssist</a></h3><p>Overlay that shows the distance and turn angle to your next stronghold each time you press F3+C.</p></div>
+          <table class="spec"><tr><td>Version</td><td data-field="version">Latest</td></tr><tr><td>Platform</td><td>Java 17+</td></tr><tr><td>File</td><td>.jar<span data-hide-empty hidden>, <span data-field="size"></span></span></td></tr></table>
+          <div class="acts"><a class="btn" data-download aria-disabled="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg><span data-label>Download</span></a><a class="btn line" href="projects/crayon-nav-assist/">Details</a></div>
+        </li>
+      </ul>
+      <p class="later">CC-003 … in progress</p>
 
       <div class="ad-row"><div class="ad-slot"></div></div>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap">
-      <p>© 2026 CommonCrayon. This site shows ads to stay free.</p>
-      <ul>
-        <li><a href="https://www.mappack.net/">MapPack</a></li>
-        <li><a href="privacy/">Privacy</a></li>
-      </ul>
-    </div>
-  </footer>
-
+    </main>
+  </div>
   <script src="assets/js/releases.js" defer></script>
   <script src="assets/js/ads.js" defer></script>
 </body>
