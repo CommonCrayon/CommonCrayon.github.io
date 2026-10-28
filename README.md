@@ -14,7 +14,7 @@ Source for the CommonCrayon website: free software downloads, hosted on GitHub P
 Download buttons fetch the latest release from each project's GitHub Releases, so publishing a new release updates the site automatically. No site change needed.
 
 - A card or panel sets `data-repo="CommonCrayon/RepoName"` and `data-asset=".exe"` (the file type to offer).
-- If GitHub can't be reached, the button falls back to the repo's latest release page.
+- The site never links to your GitHub profile or repo pages. Buttons point straight at the file, and stay disabled until it's found.
 
 ## Add a new project
 

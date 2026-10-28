@@ -1,7 +1,7 @@
 // Fills download buttons and release details from GitHub Releases.
 // Mark up a container with data-repo="Owner/Repo" and data-asset=".exe" (file extension to pick),
 // then put data-download on the link and data-field="version|size|date|downloads|file" on text spots.
-// If GitHub can't be reached, the links still point at the repo's latest release page.
+// Buttons stay disabled until a file is found, so visitors only ever get a direct file link.
 (function () {
   const CACHE_MINUTES = 30;
 
@@ -64,15 +64,22 @@
       const v = values[n.dataset.field];
       if (v) { n.textContent = v; n.closest("[data-hide-empty]")?.removeAttribute("hidden"); }
     });
+    if (!asset) return showError(el);
     el.querySelectorAll("[data-download]").forEach(a => {
-      a.href = asset ? asset.url : latest.url;
+      a.href = asset.url;
+      a.removeAttribute("aria-disabled");
       const label = a.querySelector("[data-label]");
       if (label) label.textContent = "Download v" + version;
     });
   }
 
+  function showError(el) {
+    el.querySelectorAll("[data-download] [data-label]").forEach(l => { l.textContent = "Download unavailable"; });
+    el.querySelectorAll("[data-download]").forEach(a => { a.title = "Couldn't reach the download server. Refresh the page to try again."; });
+  }
+
   document.querySelectorAll("[data-repo]").forEach(async el => {
     try { fill(el, await loadRepo(el.dataset.repo)); }
-    catch (e) { /* keep the fallback link to the releases page */ }
+    catch (e) { showError(el); }
   });
 })();

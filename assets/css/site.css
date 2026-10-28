@@ -228,3 +228,5 @@ a { color: inherit; }
   .shelf .item { grid-template-columns: minmax(0, 1fr); }
   .item-shot.is-cover { height: 220px; min-height: 0; }
 }
+
+.btn[aria-disabled="true"] { opacity: .55; cursor: default; pointer-events: none; }
